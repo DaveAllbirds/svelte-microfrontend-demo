@@ -40,6 +40,8 @@
 <div bind:this={remoteAppTarget} />
 
 <style>
+	@import '../node_modules/svelte-material-ui/bare.css';
+
 	.host .card {
 		background: #3178c6;
 		box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);

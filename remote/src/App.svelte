@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { of, tap } from 'rxjs';
+	import Button, { Label } from '@smui/button';
 
 	import { state } from 'shared';
 	console.log('remote got message:', state.message);
@@ -7,6 +8,8 @@
 	of('emit')
 		.pipe(tap(() => console.log("I'm RxJs from remote")))
 		.subscribe();
+
+	let clicked = 0;
 </script>
 
 <div class="card">
@@ -29,9 +32,15 @@
 		</svg>
 	</div>
 	<div class="title">I'm the remote app</div>
+	<hr />
+	<Button on:click={() => clicked++} variant="raised">
+		<Label>I'm a @smui button {clicked}</Label>
+	</Button>
 </div>
 
 <style>
+	@import '../node_modules/svelte-material-ui/bare.css';
+
 	.card {
 		background: #1f2124;
 		box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
