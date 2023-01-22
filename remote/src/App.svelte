@@ -39,8 +39,6 @@
 </div>
 
 <style>
-	@import '../node_modules/svelte-material-ui/bare.css';
-
 	.card {
 		background: #1f2124;
 		box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
